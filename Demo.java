@@ -1,5 +1,7 @@
 class Demo{
     public static void main(String args[]){
-        System.out.println("Hello");
+        double x=45.65;
+        int y;
+        y=x;
     }
 }
