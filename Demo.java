@@ -1,6 +1,7 @@
 class Demo{
     public static void main(String args[]){
-        int[] ar=new int[3];
-        ar[3]=100;
+       double x=10,y=0;
+       double d=x/y;
+       System.out.println(d);
     }
 }
