@@ -32,10 +32,22 @@ class Calculator extends JFrame{
             public void actionPerformed(ActionEvent evt){
                 String x1=t1.getText();
                 String x2=t2.getText();
-               int num1=Integer.parseInt(x1);    
-               int num2=Integer.parseInt(x2);
+                int num1=0;    
+                int num2=0;
+                try{
+                  num1=Integer.parseInt(x1); 
+                  num2=Integer.parseInt(x2);   
+                }catch(NumberFormatException ex){
+                   JOptionPane.showMessageDialog(null,"sry the text field must have a integer value"); 
+                }
+                int result=0;
                 
-                l2.setText(""+num1/num2);    
+                try{
+                    result=num1/num2;
+                }catch(ArithmeticException ex){
+                    result = -1;
+                }  
+                l2.setText(result+"");
             }
         });
         
