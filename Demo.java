@@ -1,61 +1,17 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-class Calculator extends JFrame{
-    JTextField t1;
-    JTextField t2;
-    JTextField t3;
-    JLabel l1;
-    JLabel l2;
-    JButton equalbtn;
-    Calculator(){
-        setSize(300,100);
-        setLocationRelativeTo(null);
-        JPanel p1=new JPanel(new FlowLayout());
-        t1=new JTextField(5);
-        t2=new JTextField(5);
-        t3=new JTextField(5);
-        l1=new JLabel("/");
-        equalbtn=new JButton("=");
-        l2=new JLabel("");
-        
-        p1.add(t1);
-        p1.add(l1);
-        p1.add(t2);
-        p1.add(equalbtn);
-        p1.add(l2);
-        add("Center",p1);
-        
-        
-        
-        equalbtn.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent evt){
-                String x1=t1.getText();
-                String x2=t2.getText();
-                int num1=0;    
-                int num2=0;
-                try{
-                  num1=Integer.parseInt(x1); 
-                  num2=Integer.parseInt(x2);   
-                }catch(NumberFormatException ex){
-                   JOptionPane.showMessageDialog(null,"sry the text field must have a integer value"); 
-                }
-                int result=0;
-                
-                try{
-                    result=num1/num2;
-                }catch(ArithmeticException ex){
-                    result = -1;
-                }  
-                l2.setText(result+"");
-            }
-        });
-        
-        setVisible(true);
-    }
-}
 class Demo{
     public static void main(String args[]){
-       Calculator c1=new Calculator();
+        System.out.println("Start");
+        int x=42,y=2;
+        int a;
+        
+        try{
+           a=x/y;
+           System.out.println("try block"); 
+        }catch(ArithmeticException ex){
+            a=-1;
+            System.out.println("Catch Block");
+        }
+        System.out.println("x/y :"+a);
+        System.out.println("End");
     }
 }
