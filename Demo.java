@@ -6,12 +6,10 @@ class Demo{
        int a=0,b=6,c=3;
         try{
            ar[c]=name.charAt(b)/a;
-        }catch(ArithmeticException ex){
-            System.out.println("Arithmetic error");
-        }catch(StringIndexOutOfBoundsException | ArrayIndexOutOfBoundsException ex){
-            System.out.println("index error");
-        }catch(IndexOutOfBoundsException ex){
-             System.out.println("Any index error");
+        }catch(ArithmeticException | IndexOutOfBoundsException ex){
+            System.out.println(" error");
+        
+       
         }catch(RuntimeException ex){
              System.out.println("Any runtime  error");
         }
