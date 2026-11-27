@@ -14,6 +14,8 @@ class Demo{
             System.out.println("Array error");
         }catch(IndexOutOfBoundsException ex){
              System.out.println("Any index error");
+        }catch(RuntimeException ex){
+             System.out.println("Any runtime  error");
         }
         System.out.println("End main");
        
