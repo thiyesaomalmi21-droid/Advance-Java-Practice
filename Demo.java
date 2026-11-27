@@ -8,12 +8,12 @@ class Demo{
            ar[c]=name.charAt(b)/a;
         }catch(ArithmeticException ex){
             System.out.println("Arithmetic error");
-        }catch(IndexOutOfBoundsException ex){
-             System.out.println("Any index error");
         }catch(StringIndexOutOfBoundsException ex){
             System.out.println("String error");
         }catch(ArrayIndexOutOfBoundsException ex){
             System.out.println("Array error");
+        }catch(IndexOutOfBoundsException ex){
+             System.out.println("Any index error");
         }
         System.out.println("End main");
        
