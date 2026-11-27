@@ -12,6 +12,8 @@ class Demo{
             System.out.println("String error");
         }catch(ArrayIndexOutOfBoundsException ex){
             System.out.println("Array error");
+        }
+        int x;
         }catch(IndexOutOfBoundsException ex){
              System.out.println("Any index error");
         }catch(RuntimeException ex){
